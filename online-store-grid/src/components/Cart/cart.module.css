@@ -1,0 +1,120 @@
+:root {
+    --color-base: #FFFFFF;
+    --color-box-shadow: #555;
+    --color-text: #000000;
+    --font-cart-list: 'Montserrat', sans-serif;
+    --carts-hover-total: #808080;
+    --carts-active-total: #584fa9;
+}
+
+
+/* оформление Cart */
+.cart {
+    /* outline: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 15px 15px;
+    margin: 0px 0px 15px 0px;
+    border-radius: 7px ;
+
+    box-shadow:0 0 10px var(--color-box-shadow);
+}
+
+.cart-img {
+    /* outline: 1px solid; */
+    display: flex;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+}
+
+.block-cart-title {
+    max-width: 750px;
+    padding: 0px 10px 0px 10px;
+}
+
+.cart-title {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: var(--color-text);
+    margin: 0px 0px 0px 0px;
+}
+
+.text-cart-list {
+    font-family: var(--font-cart-list);
+}
+
+.cart-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+}
+
+    .amount-product {
+        display: flex;
+        align-items: center;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .amount-product button {
+        margin: 0; 
+        border: 0; 
+        outline: none; 
+        background-color: transparent; 
+    }
+
+        .amount-product i {
+            cursor: pointer; 
+        }
+
+        .amount-product i:hover {
+            background: var(--carts-hover-total);
+            color: var(--color-base);
+            transition: .5s;
+        }
+
+        .amount-product i:active {
+            background: var(--carts-active-total);
+            color: var(--color-base);
+            transition: none;
+        }
+
+    .amount-product p {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 3px 0px 3px;
+
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 400;
+    }
+
+    .price-title {
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 400;
+
+        margin: 0px 0px 0px 0px;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .delete-title {
+        padding: 0px 10px 0px 10px;
+    }
+
+    .delete-title button {
+        margin: 0; 
+        border: 0; 
+        outline: none; 
+        background-color: transparent; 
+    }
+
+        .delete-title i {
+            cursor: pointer;
+        }
+
+        .delete-title i:hover {
+            background-color: #B0E0E6;
+            transition: .5s;
+        }

@@ -1,0 +1,95 @@
+:root {
+    --background-wrapper: #fefefe;
+    --font-cart-list: 'Montserrat', sans-serif;
+    --color-decor: #7E72F2;
+    --color-base: #FFFFFF;
+    --color-hover-add: #00008B;
+    --carts-active-total: #584fa9;
+}
+
+
+/* оформление CartsList */
+.wrapper-cart-list {
+    outline: 1px solid;
+    margin: 0 auto;
+    max-width: 1300px;
+    min-width: 1100px;
+    
+    background-color: var(--background-wrapper);
+}
+
+.header-close {
+    /* outline: 1px solid; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    padding: 0px 20px 0px 0px;
+}
+
+.header-close a {
+    display: flex;
+    align-items: center;
+}
+
+.carts-list {
+    list-style: none;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+}
+
+        
+    .cart-total {
+        display: flex;
+        justify-content: center;
+        margin: 0px 0px 0px 0px;
+        padding: 10px 10px 10px 10px;
+    }
+
+        .text-cart-list {
+            font-family: var(--font-cart-list);
+        }
+        
+        .cart-total h2 {
+            margin: 0px 0px 0px 0px;
+
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 400;
+        }
+
+        .cart-total p {
+            margin: 0px 0px 0px 3px;
+
+            font-size: 14px;
+            line-height: 1.2;
+        }
+
+    .order-button {
+        display: flex;
+        justify-content: center;
+        
+        padding: 0px 0px 10px 0px;
+    }
+
+        .order-button button {cursor: pointer; }
+
+        .order-button button {
+            width: 200px;
+            border-radius: 3px 3px 3px 3px;
+            border: none;
+            padding: 8px;
+
+            font-size: 12px;
+            background-color: var(--color-decor);
+            color: var(--color-base);
+        }
+
+        .order-button button:hover {
+            background-color: var(--color-hover-add);
+            transition: .5s;
+        }
+        .order-button button:active {
+            background-color: var(--carts-active-total);
+            transition: none;
+        }
