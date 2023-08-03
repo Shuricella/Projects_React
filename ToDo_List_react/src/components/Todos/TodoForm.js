@@ -16,7 +16,7 @@ function TodoForm({addTodo}) {
         // после отправки формы обнуляем поле ввода
         setText('');
     };
-
+            
     return (
         <div className={styles.todoFormContainer}>
             <form onSubmit={onSubmitHandler}>
