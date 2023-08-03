@@ -50,29 +50,36 @@ function App() {
   console.log("completedTodosCount=", !!completedTodosCount);
 
   return (
-    <div className="App">
+    <div className="wrapper">
+      <section className="section-block">
 
-      <h1>Todo App</h1>
+        <div className="left-block">
+          <h1>Todo App</h1>
 
-      <TodoForm addTodo={addTodoHandler} />
+          <TodoForm addTodo={addTodoHandler} />
 
-      {!!todos.length && <TodosActions
-        completedTodosExist={!!completedTodosCount}
-        resetTodos={resetTodosHandler}
-        deleteCompleteTodos={deleteCompleteTodosHandler}
-      />}
-      
-      <TodoList 
-        todos={todos} 
-        deleteTodo={deleteTodoHandler} 
-        toggleTodo={toggleTodoHandler} 
-      />
+          {!!todos.length && <TodosActions
+            completedTodosExist={!!completedTodosCount}
+            resetTodos={resetTodosHandler}
+            deleteCompleteTodos={deleteCompleteTodosHandler}
+          />}
+          
+          <TodoList 
+            todos={todos} 
+            deleteTodo={deleteTodoHandler} 
+            toggleTodo={toggleTodoHandler} 
+          />
 
-      {completedTodosCount > 0 
-        && <h2>{`You have completed ${completedTodosCount} ${
-          completedTodosCount > 1 ? "todos" : "todo"
-        }`}</h2> 
-      }
+          {completedTodosCount > 0 
+            && <h2>{`You have completed ${completedTodosCount} ${
+              completedTodosCount > 1 ? "todos" : "todo"
+            }`}</h2> 
+          }
+        </div>
+
+        <div className="right-block">Text rigt hhhhhhhhhhhhhhh jjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjjjjjjjjj njjjjjjjjjjjjjjjjjjj mmmmmmmmmmmm</div>
+        
+      </section>
 
     </div>
   );
