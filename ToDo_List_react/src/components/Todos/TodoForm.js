@@ -6,14 +6,13 @@ import styles from "./TodoForm.module.css"
 function TodoForm({addTodo}) {
     const [text, setText] = useState('');
 
-    // функция отправки текста при нажатии кнопки Submit
     const onSubmitHandler = (event) => {
-        // делаем что-бы при нажатии на кнопку Submit на переходило на новую страницуa
+        //при нажатии на кнопку Submit не переходит на новую страницуa
         event.preventDefault();
 
         addTodo(text);
 
-        // после отправки формы обнуляем поле ввода
+        // после отправки формы обнуление поля ввода
         setText('');
     };
             

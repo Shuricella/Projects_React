@@ -10,7 +10,7 @@ function App() {
   const [todos, setTodos] = useState( [] );
 
   const addTodoHandler = (text) => {
-    // делаем проверку на отправку пустой формы при нажатии кнопки
+    // проверка на отправку пустой формы при нажатии кнопки
     if(text === '') { return };
 
     // uuidv4() генерирует случайный код для реализации id
@@ -20,7 +20,7 @@ function App() {
       id: uuidv4(),
     }
     
-    //добавляем существующие todos и к ним добаляем новое значение text
+    //переонс существующих todos и к ним добаляем новое значение text
     setTodos( [...todos, newTodo] );
   }
 
@@ -28,7 +28,7 @@ function App() {
     setTodos( todos.filter( (todo) => {return todo.id !== id} ) );
   };
 
-  // функция выделения завершенной задачи (выделяется серым цветом все оформление)
+  // функция выделения завершенной задачи (выделяется серым цветом весь блок)
   const toggleTodoHandler = (id) => {
     setTodos(todos.map((todo) => {
       return ( todo.id === id ? {...todo, isCompleted: !todo.isCompleted} : {...todo} );
@@ -40,22 +40,18 @@ function App() {
     setTodos([]);
   }
 
-  // функция удаления отмеченных завершенных дел
+  // функция удаления завершенных дел
   const deleteCompleteTodosHandler = () => {
     setTodos( todos.filter( (todo) => {return todo.isCompleted === false} ) );
   }
 
-  // организуем счетчик завешенных задач todos
+  // счетчик завершенных задач todos
   const completedTodosCount = todos.filter( (todo) => todo.isCompleted ).length;
-  console.log("completedTodosCount=", !!completedTodosCount);
 
   return (
     <div className="wrapper">
       
-
         <div className="left-block">
-          {/* <h1>Todo App</h1> */}
-
           <TodoForm addTodo={addTodoHandler} />
 
           {!!todos.length && <TodosActions
@@ -81,8 +77,7 @@ function App() {
           <h1>TO DO LIST</h1> 
           <h2>using REACT</h2>
         </div>
-        
-      
+          
     </div>
   );
 }
