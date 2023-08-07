@@ -2,11 +2,20 @@ import Todo from "./Todo.js";
 import styles from "./TodoList.module.css";
 
 function TodoList({todos, deleteTodo, toggleTodo}) {
-    console.log("todos=",todos);
+    
+    const getTemplateEmpty = () => {
+        return (
+            <>
+                <h2>Todo list is empty</h2>
+                <h3>Make your day rich!!!</h3>
+            </>
+        );
+    };
+
     return (
         <div className={styles.todoListConteiner}>
 
-            {!todos.length && <h2>Todo list is empty</h2> }
+            {!todos.length && getTemplateEmpty() }
 
             { todos.map( (todo)=>{ 
                 return <Todo 

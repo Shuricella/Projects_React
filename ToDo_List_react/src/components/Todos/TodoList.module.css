@@ -1,3 +1,12 @@
 .todoListConteiner {
     padding: 10px;
 }
+
+.todoListConteiner h2 {
+    font-size: 1.2rem;
+}
+
+.todoListConteiner h3 {
+    font-size: 3rem;
+    margin: 20vh 0 0 0;
+}

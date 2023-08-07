@@ -51,10 +51,10 @@ function App() {
 
   return (
     <div className="wrapper">
-      <section className="section-block">
+      
 
         <div className="left-block">
-          <h1>Todo App</h1>
+          {/* <h1>Todo App</h1> */}
 
           <TodoForm addTodo={addTodoHandler} />
 
@@ -77,10 +77,12 @@ function App() {
           }
         </div>
 
-        <div className="right-block">Text rigt hhhhhhhhhhhhhhh jjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjjjjjjjjj njjjjjjjjjjjjjjjjjjj mmmmmmmmmmmm</div>
+        <div className="right-block">
+          <h1>TO DO LIST</h1> 
+          <h2>using REACT</h2>
+        </div>
         
-      </section>
-
+      
     </div>
   );
 }
